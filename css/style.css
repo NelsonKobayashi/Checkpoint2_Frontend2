@@ -1,0 +1,236 @@
+* { /* zerando padrões do browser */
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* definido variáveis de cores para implementar o darkmode */
+:root {
+    --body-bg: #efefef;
+    --color: #603d97;
+}
+.dark-mode:root{
+    --body-bg: rgb(70, 68, 68);
+    --color: rgb(255, 255, 255);
+}
+
+/* definindo cor de fundo do body */
+body {
+    background-color: var(--body-bg);
+}
+
+/* definindo configurações padrões da main */
+main {
+    padding: 100px;
+    background-color: var(--body-bg);
+}
+
+/* definindo padrões da caixa de forms de criar tarefa */
+.criar-tarefa {
+    background-color: var(--body-bg);
+    border: 1px solid rgb(95, 65, 167);
+    display:block; 
+    width: 350px;
+    margin: 0 auto; 
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px 3px #97B1BF;
+    margin-top: 0.5rem;
+    margin-bottom: 0.9rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* estilização especial para a tag h4 */
+.criar-tarefa h4 {
+    text-align: center;
+    margin: 0.5rem;
+    color:var(--color);
+}
+
+/* estilização especial para a tag label */
+.criar-tarefa label {
+    margin-left: 10px;
+    color:var(--color);
+
+}
+
+/* estilização especial para a tag input */
+.criar-tarefa input {
+    border: 1px solid #603d97;
+    outline: none;
+    margin: 0px 0px 5px 5px;
+    width: 95%;
+    padding: 5px 0px 5px 0px; 
+}
+
+/* focando no input com a class criar-tarefa */
+.criar-tarefa input:focus {
+    border-color: #d1b6fc;
+}
+
+/* estilizando o botão da classe tarefa */
+.criar-tarefa button {
+    background-color: var(--color);
+    border: none;
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    margin: 0.3rem 50%;
+    transform: translateX(-50%);
+    color: var(--body-bg);
+    border-radius: 5px;
+}
+
+/* colocando efeito de hover no botão */
+.criar-tarefa button:hover{
+   background:#fff;
+   box-shadow:0px 2px 7px 5px #97B1BF;
+   color:#7c4dc9;
+}
+
+/* estilizando o botão da classe tarefa */
+.criar-tarefa button:after {
+    content: "";
+    background: #d1b6fc;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+/* estilizando o botão da classe tarefa */
+.criar-tarefa button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/* arrumando posição do label e do contador */
+div .um{ 
+    display: flex;
+    justify-content: space-between;
+}
+
+/* posicionando o contador */
+.counter {
+    margin: 10px;
+}
+
+/* ajustando posição  da classe todo-list*/
+.todo-list{
+    display:flex;
+    justify-content: center;
+}
+
+/* estilizando a tag h3 */
+.todo-list h3 {
+    word-break: break-all;
+    margin-bottom: 5px;
+}
+
+
+.todo-list #todo .buttons  i:first-child {
+    background-color: var(--body-bg);
+}
+/* estilização do botão de tarefa completa */
+.todo-list #completed{
+    text-decoration: line-through #f55;
+}
+.todo-list #completed .buttons  i:first-child {
+    background-color: var(--body-bg);
+}
+.todo-list #todo .buttons .completar i:first-child {
+    color: rgb(190, 190, 190);
+}
+.todo-list #completed .buttons .completar i:first-child {
+    color: #5f5;
+}
+
+/* estilização do card padrão */
+.todo {
+    display: flex; 
+    flex-wrap: wrap;
+    color: var(--color);
+    justify-content: center; 
+    font-size: 1rem;
+    font-family:'Courier New', Courier, monospace;
+    margin: 5px;
+}
+
+/* estilização do card inserido */
+#todo .to-do-div{
+    border: 2px solid rgb(238, 99, 99);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 125px;
+    flex-wrap: wrap;
+}
+
+/* estilização do card com tarefa completa */
+#completed .to-do-div{
+    border: 2px solid rgb(53, 241, 116);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 125px;
+    flex-wrap: wrap;
+}
+
+/* definindo tamanho e posição do texto do card */
+.to-do-div h5{
+    margin: 5px auto 10px auto;
+    padding: 3px 10px 0 10px ;
+}
+
+/* estilizando datas no card */
+.to-do-div span{
+    display: block;
+    margin-bottom: 5px;
+    font-size: .8rem;
+    text-align: center;
+}
+
+/* posicionando botões do card */
+div.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+button {
+    cursor: pointer;
+    align-items: flex-end;
+    margin: 5px;
+}
+button div img {
+    max-width: 30px;
+}
+.remover, .completar {
+    background: transparent;
+}
+
+/* configurando responsividade */
+@media (max-width:320px) {
+    div .um{
+        max-width: 70%;
+    }
+
+    .todo-list{
+        display:grid;
+        grid-template-columns: (1, 300px);
+        justify-content: center;
+    }
+    
+}
+
+

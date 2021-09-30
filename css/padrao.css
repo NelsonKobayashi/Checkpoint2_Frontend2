@@ -1,0 +1,41 @@
+/* estilizando a nav */
+header nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 5rem;
+    color: #fff;
+    background-color: rgb(138, 120, 179);
+    position: fixed;
+    z-index: 1;
+}
+
+/* estilizando a logo */
+.logo{
+    max-width: 60px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* estilizando o footer */
+footer {
+    display: flex;
+    position: fixed; 
+    bottom: 0px;
+    width: 100%;
+    justify-content: space-around;
+    height: 4rem;
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+}
+footer p {
+    color:rgb(255, 255, 255);
+    padding: 20px;
+
+}
+footer img{
+    max-width: 40px;
+    max-height: 40px;
+    padding: 10px;
+}
+

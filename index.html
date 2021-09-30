@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tirar depois se não quiser usar os-->
+    <script src="https://kit.fontawesome.com/256fb4a9c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/padrao.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favi.ico" type="image/x-icon">
+    <title>To Do - List</title>
+</head>
+
+<!--Tirar depois a classe loaded-->
+
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="criar-tarefa">
+            <h4>Adicione uma Tarefa ou Compromisso:</h4>
+            <div >
+                <div class="um">
+                    <label for="tarefa">Tarefa:</label>
+                    <span id="counterTitle" class="counter">40</span>
+                </div>
+                <input type="text" name="tarefa" maxlength="40" id="tarefa" required>
+            </div>
+            <div>
+                <div>
+                    <label for="data-criacao">Data de criação:</label>
+                    <input type="datetime-local" name="dataCriacao" id="dataCriacao" disabled>
+                </div>
+                <div>
+                    <label for="data-final">Data final:</label>
+                    <input type="datetime-local" name="dataFinal" id="dataFinal" required>
+                </div>
+            </div>
+                <button id="btn-add">Adicionar</button>
+            </div>
+            <div class="todo-list">
+            <div class="todo" id="todo"></div>
+            <div class="todo" id="completed"></div>
+        </div>     
+    </main>
+    <footer>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/padrao.js"></script>
+</body>
+</html>
+
